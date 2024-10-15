@@ -6,18 +6,7 @@ public class QuestionManager : MonoBehaviour
 {
     public static QuestionManager Instance { get; private set; }
 
-    public QuestionList chapter2;
-    public QuestionList chapter3;
-    public QuestionList chapter4;
-    public QuestionList chapter5;
-    public QuestionList chapter6;
-    public QuestionList chapter7;
-    public QuestionList chapter8;
-    public QuestionList chapter9;
-    public QuestionList chapter10;
-    public QuestionList chapter11;
-
-    private List<QuestionList> questionLists;
+    public List<QuestionList> questionLists;
 
     private List<Question> questions;
 
@@ -34,20 +23,6 @@ public class QuestionManager : MonoBehaviour
     {
         //holds all available questions for this instance
         questions = new List<Question>();
-
-        //holds all the questionList scrioptable objects
-        questionLists = new List<QuestionList>();
-
-        questionLists.Add(chapter2);
-        questionLists.Add(chapter3);
-        questionLists.Add(chapter4);
-        questionLists.Add(chapter5);
-        questionLists.Add(chapter6);
-        questionLists.Add(chapter7);
-        questionLists.Add(chapter8);
-        questionLists.Add(chapter9);
-        questionLists.Add(chapter10);
-        questionLists.Add(chapter11);
     }
     #endregion
 
@@ -68,17 +43,31 @@ public class QuestionManager : MonoBehaviour
 
         else
         {
-            foreach (Question q in questionLists[chapter].questions)
+            foreach(QuestionList qList in questionLists)
             {
-                questions.Add(q);
+                if(qList.GetChapter() == chapter)
+                {
+                    foreach(Question q in qList.questions)
+                    {
+                        questions.Add(q);
+                    }
+                }
             }
         }
     }
 
     public Question GetQuestion()
     {
-        int pickedQuestion = Random.Range(0, questions.Count);
-        return questions[pickedQuestion];
+        if (questions.Count > 0)
+        {
+            int pickedQuestion = Random.Range(0, questions.Count);
+            return questions[pickedQuestion];
+        }
+        else
+        {
+            Debug.Log("NO QUESTIONS!");
+            return null;
+        }
     }
     
 

@@ -1584,16 +1584,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc6f0162b007a044bc740393694bf12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapter2: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
-  chapter3: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
-  chapter4: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
-  chapter5: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
-  chapter6: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
-  chapter7: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
-  chapter8: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
-  chapter9: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
-  chapter10: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
-  chapter11: {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
+  questionLists:
+  - {fileID: 11400000, guid: f4ae5cf87ea1f8548be9f922304e07e2, type: 2}
+  - {fileID: 11400000, guid: 89646dee130414e46b1e44865dcefc55, type: 2}
 --- !u!1 &767380429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,7 +1659,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3688,15 +3681,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 30
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3724,7 +3717,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 473.87454, y: 0, z: 474.42975, w: 0}
+  m_margin: {x: 473.87454, y: 0, z: 474.42975, w: -33.013184}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -46,7 +46,6 @@ public class UIManager : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log(useAllChapters);
         if (useAllChapters) {
             GameManager.Instance.StartGame(-1);
            

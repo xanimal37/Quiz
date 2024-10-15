@@ -7,9 +7,14 @@ using UnityEngine;
 public class QuestionList : ScriptableObject
 {
     [SerializeField]
-    public int chapter;
+    private int chapter;
     [SerializeField]
     public List<Question> questions; 
+
+    public int GetChapter()
+    {
+        return chapter;
+    }
 }
 
 [Serializable]
